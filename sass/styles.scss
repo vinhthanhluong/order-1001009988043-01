@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+// Libraries
+@import url(../js/libs/aos/aos.css);
+@import url(../js/libs/slick/slick.css);
+@import url(../js/libs/slick/slick-theme.css);
+
+// Core
+@import './core/code/variable'; 
+@import './core/code/mixins';
+@import './core/code/code';
+@import url(../sass/core/base.css);
+
+// Components
+@import url(../sass/components/library.css);
+
+/*=============================G L O B A L=============================*/
+#wrapper {
+    min-width: 1220px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.inner-full {
+    max-width: $max-width;
+    width: $inner-full-width;
+    margin: 0 auto;
+    padding: 0 $padding;
+}
+
+.inner {
+    width: $inner-width;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.cols {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: (-$padding);
+}
+
+.col {
+    padding: $padding;
+}
+
+.img-w-100 {
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.img-h-100 {
+    img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.image-l {
+    float: left;
+    margin: 0 60px 20px 0;
+}
+
+.image-r {
+    float: right;
+    margin: 0 0 20px 60px;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+.modal-open {
+    overflow: hidden;
+    position: relative;
+    -ms-touch-action: none;
+    touch-action: none;
+    -webkit-overflow-scrolling: auto;
+}
+
+/*============================= H_E_A_D_E_R =============================*/
+@import './components/code/header';
+/*============================= F_O_O_T_E_R =============================*/
+@import './components/code/footer';
+/*============================= C_O_N_T_E_N_T =============================*/
+@import './page/home/home';
+/*============================= HACK CSS =============================*/
+
+/* IE */
+@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+}
+
+/* EGDE */
+@supports (-ms-ime-align: auto) {
+}
+
+/* FIREFOX */
+@-moz-document url-prefix() {
+}
+
+/* Safari 10.1+ (which is the latest version of Safari at this time) */
+@media not all and (min-resolution: 0.001dpcm) {
+    // @media {
+    // }
+}
+
+/*======================= WORDPRESS ADMIN LOGED IN ========================*/
+
+.customize-support #header {
+    margin-top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+    .customize-support #header {
+        margin-top: 46px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .customize-support #header {
+        margin-top: 0px !important;
+    }
+}

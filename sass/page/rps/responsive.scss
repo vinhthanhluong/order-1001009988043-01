@@ -1,0 +1,362 @@
+// Core
+@import "../../core/code/variable";
+@import "../../core/code/mixins";
+@import "../../core/code/code";
+
+@include min-media(751px) {
+    .sp {
+        display: none !important;
+    }
+
+    .to-top:hover {
+        background: #004870;
+    }
+
+    //  ========================== Headeer ==========================
+
+    .menu-list {
+        //level 1
+        > li {
+            > a {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 0;
+                    height: 1.5px;
+                    background-color: #1a2542;
+                    transition: all 0.3s ease;
+                }
+                &:hover {
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .dropdown {
+        &:hover {
+            > .sub-menu {
+                transform: translateY(0);
+                pointer-events: auto;
+                @include visible;
+                z-index: 1;
+            }
+
+            // .fa.fa-angle-down {
+            //     pointer-events: none;
+            // }
+
+            a {
+                &:hover {
+                    i {
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .sub-menu {
+        transition: all 0.3s ease;
+        transform: translateY(10px);
+        pointer-events: none;
+        @include hidden;
+
+        a {
+            &:hover {
+                color: #fff;
+                background-color: #1a2542;
+            }
+        }
+    }
+
+    //  ========================== END - Headeer ==========================
+}
+
+/* end screen-min:751px */
+
+@media screen and (min-width: 751px) and (max-width: 1500px) {
+}
+
+/* end screen-min:751px && screen-max:1500px */
+
+@include max-media(750px) {
+    // ========================== Base code ==========================
+    #wrapper {
+        min-width: unset !important;
+    }
+
+    .inner {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .pc {
+        display: none !important;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+
+    .search-desktop {
+        display: none;
+    }
+
+    .search-mobile {
+        display: flex;
+        .search-form {
+            width: 90%;
+        }
+
+        .f-control {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .f-submit {
+            font-size: 12px;
+        }
+    }
+
+    .tab-mobi {
+        .tab-link-mobi {
+            display: block;
+        }
+
+        .tab-link {
+            border: none;
+            display: block;
+            background-color: $w-cl;
+            padding: 10px;
+        }
+
+        .tab-title{
+            padding: 8px 10px;
+            &:first-child{
+                padding-left: 10px;
+            }
+
+            &.active{
+                background-color: wheat;
+            }
+        }
+
+        .tab-line{
+            display: none;
+        }
+    }
+    // ========================== END Base code ==========================
+
+    //  ========================== Headeer ==========================
+    .header-menu {
+        position: fixed;
+        top: 0;
+        left: unset;
+        right: 100vw;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        transition: all 0.3s ease;
+        z-index: 98;
+
+        .menu-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 260px;
+            height: 100%;
+            background-color: #fff;
+            padding: 20px 0 40px;
+            display: flex;
+            flex-direction: column;
+            z-index: 99;
+        }
+
+        .logo-mobile {
+            display: block;
+        }
+
+        .overplay {
+            @include visible;
+        }
+    }
+
+    .menu-list {
+        display: block;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 400px;
+        @include custom-scrollbar(3px, #1a2542);
+
+        // style chung
+        a {
+            padding: 10px 20px;
+            border-bottom: 1px solid rgba($color: black, $alpha: 0.16);
+            transition: all 0.3s ease;
+        }
+
+        // level 1
+        > li {
+            > a {
+                &:focus {
+                    color: #1a2542;
+                }
+            }
+        }
+    }
+
+    .dropdown {
+        position: relative;
+
+        &:hover {
+            > a {
+                color: #1a2542;
+            }
+        }
+
+        // .fa.fa-angle-down {
+        //     width: 20px;
+        //     height: 100%;
+        //     font-weight: bold;
+        //     transition: transform 0.3s;
+        //     text-align: center;
+
+        //     // mobile
+        //     @include max-media($bk-d-768) {
+        //         position: absolute;
+        //         top: 0;
+        //         right: 0;
+        //         width: 40px;
+
+        //         &:before {
+        //             @include pos-mid;
+        //         }
+
+        //         transform: rotate(-90deg);
+
+        //         &.--show {
+        //             transform: rotate(0deg);
+        //         }
+        //     }
+        // }
+    }
+
+    .sub-menu {
+        position: relative;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100%;
+        display: none;
+
+        a {
+            padding-left: 30px;
+            border-bottom: 1px solid white;
+            &:hover {
+                color: white;
+                background-color: #1a2542;
+            }
+        }
+
+        .sub-menu a {
+            padding-left: 45px;
+        }
+
+        .sub-menu .sub-menu a {
+            padding-left: 60px;
+        }
+    }
+    //  ========================== END - Headeer ==========================
+}
+
+/* end screen-max:750px */
+
+@include max-media(640px) {
+}
+
+/* end screen-max:640px */
+
+@include max-media(560px) {
+}
+
+/* end screen-max:560px */
+
+@include max-media(520px) {
+}
+
+/* end screen-max:520px */
+
+@include max-media(475px) {
+}
+
+/* end screen-max:475px */
+
+@include max-media(425px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    input,
+    button,
+    textarea,
+    select,
+    p,
+    blockquote,
+    th,
+    td,
+    pre,
+    address,
+    li,
+    dt,
+    dd {
+        font-size: 140%;
+    }
+
+    p {
+        line-height: 1.8em;
+    }
+}
+
+/* end screen-max:425px */
+
+@include max-media(375px) {
+}
+
+/* end screen-max:375px */
+
+@include max-media(320px) {
+}
+
+/* end screen-max:320px */
+
+/*============================= HACK CSS =============================*/
+
+/* IE */
+@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+}
+
+/* EGDE */
+@supports (-ms-ime-align: auto) {
+}
+
+/* FIREFOX */
+@-moz-document url-prefix() {
+}
+
+/* Safari 10.1+ (which is the latest version of Safari at this time) */
+@media not all and (min-resolution: 0.001dpcm) {
+    // @media {
+    // }
+}
