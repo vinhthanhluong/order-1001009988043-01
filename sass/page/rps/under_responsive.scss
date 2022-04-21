@@ -1,7 +1,7 @@
 // Core
 @import "../../core/code/variable";
 @import "../../core/code/mixins";
-@import "../../core/code/code";
+// @import "../../core/code/code";
 
 @include min-media(751px) {
     #topic_path ul li a:hover {

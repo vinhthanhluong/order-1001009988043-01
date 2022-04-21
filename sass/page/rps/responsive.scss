@@ -1,14 +1,14 @@
 // Core
 @import "../../core/code/variable";
 @import "../../core/code/mixins";
-@import "../../core/code/code";
+// @import "../../core/code/code";
 
 @include min-media(751px) {
     .sp {
         display: none !important;
     }
 
-    [href^=tel]{
+    [href^="tel"] {
         pointer-events: none;
     }
 
@@ -55,8 +55,6 @@
             //     pointer-events: none;
             // }
 
-           
-
             a {
                 &:hover {
                     i {
@@ -93,6 +91,29 @@
 
 @include max-media(750px) {
     // ========================== Base code ==========================
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    input,
+    button,
+    textarea,
+    select,
+    p,
+    blockquote,
+    th,
+    td,
+    pre,
+    address,
+    li,
+    dt,
+    dd {
+        font-size: 140%;
+    }
+
     #wrapper {
         min-width: unset !important;
     }
@@ -107,7 +128,7 @@
     }
 
     .open-nav {
-        .header-menu{
+        .header-menu {
             right: 0;
         }
         .overplay {
@@ -142,7 +163,7 @@
             font-size: 12px;
         }
     }
-   
+
     // ========================== END Base code ==========================
 
     //  ========================== Headeer ==========================
@@ -174,8 +195,6 @@
         .logo-mobile {
             display: block;
         }
-
-       
     }
 
     .menu-list {
@@ -211,13 +230,13 @@
             }
         }
 
-        .open{
-            &::before{
+        .open {
+            &::before {
                 transform: scale(-1);
             }
         }
 
-        > a{
+        > a {
             &::before {
                 content: "";
                 border-top: solid 8px #1e2c63;
@@ -233,7 +252,7 @@
         .dropdown {
             &:hover {
                 > a {
-                    &::before{
+                    &::before {
                         border-top: solid 8px red;
                     }
                 }
@@ -337,10 +356,6 @@
     dt,
     dd {
         font-size: 140%;
-    }
-
-    p {
-        line-height: 1.8em;
     }
 }
 

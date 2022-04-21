@@ -1,12 +1,8 @@
-.main-cl {
-  color: wheat;
-}
-
 @media screen and (min-width: 751px) {
   .sp {
     display: none !important;
   }
-  [href^=tel] {
+  [href^="tel"] {
     pointer-events: none;
   }
   .menu-list > li > a::before {
@@ -55,6 +51,27 @@
 /* end screen-min:751px */
 /* end screen-min:751px && screen-max:1500px */
 @media screen and (max-width: 750px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  input,
+  button,
+  textarea,
+  select,
+  p,
+  blockquote,
+  th,
+  td,
+  pre,
+  address,
+  li,
+  dt,
+  dd {
+    font-size: 140%;
+  }
   #wrapper {
     min-width: unset !important;
   }
@@ -224,9 +241,6 @@
   dt,
   dd {
     font-size: 140%;
-  }
-  p {
-    line-height: 1.8em;
   }
 }
 
