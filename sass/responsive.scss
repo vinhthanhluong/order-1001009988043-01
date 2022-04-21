@@ -1,7 +1,6 @@
 // Core
-@import "../../core/code/variable";
-@import "../../core/code/mixins";
-// @import "../../core/code/code";
+@import "./core/variable";
+@import "./core/mixins";
 
 @include min-media(751px) {
     .sp {
