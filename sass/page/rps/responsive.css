@@ -6,8 +6,8 @@
   .sp {
     display: none !important;
   }
-  .to-top:hover {
-    background: #004870;
+  [href^=tel] {
+    pointer-events: none;
   }
   .menu-list > li > a::before {
     content: "";
@@ -65,8 +65,12 @@
   .pc {
     display: none !important;
   }
-  #menu-toggle {
-    display: block;
+  .open-nav .header-menu {
+    right: 0;
+  }
+  .open-nav .overplay {
+    opacity: 1;
+    visibility: visible;
   }
   .hamburger-btn {
     display: block;
@@ -89,27 +93,6 @@
   .search-mobile .f-submit {
     font-size: 12px;
   }
-  .tab-mobi .tab-link-mobi {
-    display: block;
-  }
-  .tab-mobi .tab-link {
-    border: none;
-    display: block;
-    background-color: #fff;
-    padding: 10px;
-  }
-  .tab-mobi .tab-title {
-    padding: 8px 10px;
-  }
-  .tab-mobi .tab-title:first-child {
-    padding-left: 10px;
-  }
-  .tab-mobi .tab-title.active {
-    background-color: wheat;
-  }
-  .tab-mobi .tab-line {
-    display: none;
-  }
   .header-menu {
     position: fixed;
     top: 0;
@@ -118,8 +101,8 @@
     width: 100%;
     height: 100%;
     text-align: left;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
     z-index: 98;
   }
   .header-menu .menu-wrapper {
@@ -142,10 +125,6 @@
   }
   .header-menu .logo-mobile {
     display: block;
-  }
-  .header-menu .overplay {
-    opacity: 1;
-    visibility: visible;
   }
   .menu-list {
     display: block;
@@ -177,6 +156,24 @@
   }
   .dropdown:hover > a {
     color: #1a2542;
+  }
+  .dropdown .open::before {
+    -webkit-transform: scale(-1);
+            transform: scale(-1);
+  }
+  .dropdown > a::before {
+    content: "";
+    border-top: solid 8px #1e2c63;
+    border-left: solid 8px transparent;
+    border-right: solid 8px transparent;
+    position: absolute;
+    right: 15px;
+    top: calc(50% - 4px);
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .dropdown .dropdown:hover > a::before {
+    border-top: solid 8px red;
   }
   .sub-menu {
     position: relative;

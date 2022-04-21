@@ -38,6 +38,7 @@
     position: relative;
     cursor: pointer;
     display: none;
+    z-index: 99;
 
     .bar {
         width: 30px;
@@ -91,14 +92,14 @@
 .scroll-top {
     position: fixed;
     bottom: 40px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
     background-color: $main-cl;
     border: 1px $main-cl solid;
     border-radius: 4px;
     cursor: pointer;
-    z-index: 999;
+    z-index: 98;
     overflow: hidden;
     transition: all .3s ease;
     @include hidden();
@@ -107,41 +108,12 @@
         @include visible();
     }
 
-    &::before,
-    &::after {
-        content: "";
-        font-family: "Fontawesome";
-        color: $w-cl;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        font-size: 20px;
-        transition: all .3s ease;
-    }
-
-    &::before {
-        content: "\f106 ";
-        transform: translate(-50%, -50%);
-    }
-
-    &::after {
-        content: "\f102  ";
-        transform: translate(-50%, 150%);
-        @include hidden();
-        color: $main-cl;
+    img {
+        @include pos-mid;
+        filter: brightness(0) invert(1);
     }
 
     &:hover {
-        background-color: $w-cl;
-
-        &::before {
-            transform: translate(-50%, -150%);
-            @include hidden();
-        }
-
-        &::after {
-            transform: translate(-50%, -50%);
-            @include visible();
-        }
+        opacity: .8;
     }
 }

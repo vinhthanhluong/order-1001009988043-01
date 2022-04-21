@@ -32,27 +32,56 @@ $(window).bind('load', function() {
 });
 // =========== END - ANCHOR LINK ============
 
-
-
 // BACK TO TOP
 $(document).ready(function() {
     "use strict";
-    $('.to-top').click(function() {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 600);
+    $(".scroll-top").click(function () {
+        $('html,body').animate({
+            scrollTop: 0,
+        }, 1000);
+        return false;
     });
 
-    $(window).bind('load scroll', function() {
-        if ($(this).scrollTop() >= 500) {
-            $('.to-top').addClass('show');
-        } else {
-            $('.to-top').removeClass('show');
+    let lastScrollTop = 0;
+    $(window).scroll(function () {
+        var st = $('html,body').scrollTop();
+        //console.log(st);
+
+        if (st <= 10) {
+            $('.scroll-top').removeClass('--active');
+            return;
         }
+
+        if (st > lastScrollTop) {
+            $('.scroll-top').removeClass('--active');
+        } else {
+            $('.scroll-top').addClass('--active');
+        }
+        lastScrollTop = st <= 0 ? 0 : st;
+        
+        
     });
 });
 // =========== END - BACK TO TOP ============
 
+
+// SCROLL HEADER
+
+$(window).scroll(function () { 
+    var st  = $(window).scrollTop();
+
+    var heightHeader = $('#header').outerHeight();
+
+    if (st > 10) {
+        $('#header').addClass('--fix');
+        // $('#main').css('margin-top' , heightHeader);
+    }else{
+        $('#header').removeClass('--fix');
+        // $('#main').css('margin-top' , '0px');
+    }
+});
+
+// =========== END - SCROLL HEADER ============
 
 
 // SCROLL TO MAIL FORM

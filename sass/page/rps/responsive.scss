@@ -8,9 +8,13 @@
         display: none !important;
     }
 
-    .to-top:hover {
-        background: #004870;
+    [href^=tel]{
+        pointer-events: none;
     }
+
+    // .to-top:hover {
+    //     background: #004870;
+    // }
 
     //  ========================== Headeer ==========================
 
@@ -50,6 +54,8 @@
             // .fa.fa-angle-down {
             //     pointer-events: none;
             // }
+
+           
 
             a {
                 &:hover {
@@ -100,9 +106,18 @@
         display: none !important;
     }
 
-    #menu-toggle {
-        display: block;
+    .open-nav {
+        .header-menu{
+            right: 0;
+        }
+        .overplay {
+            @include visible;
+        }
     }
+
+    // #menu-toggle {
+    //     display: block;
+    // }
 
     .hamburger-btn {
         display: block;
@@ -127,34 +142,7 @@
             font-size: 12px;
         }
     }
-
-    .tab-mobi {
-        .tab-link-mobi {
-            display: block;
-        }
-
-        .tab-link {
-            border: none;
-            display: block;
-            background-color: $w-cl;
-            padding: 10px;
-        }
-
-        .tab-title{
-            padding: 8px 10px;
-            &:first-child{
-                padding-left: 10px;
-            }
-
-            &.active{
-                background-color: wheat;
-            }
-        }
-
-        .tab-line{
-            display: none;
-        }
-    }
+   
     // ========================== END Base code ==========================
 
     //  ========================== Headeer ==========================
@@ -166,7 +154,7 @@
         width: 100%;
         height: 100%;
         text-align: left;
-        transition: all 0.3s ease;
+        transition: all 0.4s ease;
         z-index: 98;
 
         .menu-wrapper {
@@ -187,9 +175,7 @@
             display: block;
         }
 
-        .overplay {
-            @include visible;
-        }
+       
     }
 
     .menu-list {
@@ -222,6 +208,35 @@
         &:hover {
             > a {
                 color: #1a2542;
+            }
+        }
+
+        .open{
+            &::before{
+                transform: scale(-1);
+            }
+        }
+
+        > a{
+            &::before {
+                content: "";
+                border-top: solid 8px #1e2c63;
+                border-left: solid 8px transparent;
+                border-right: solid 8px transparent;
+                position: absolute;
+                right: 15px;
+                top: calc(50% - 4px);
+                transition: all 0.2s;
+            }
+        }
+
+        .dropdown {
+            &:hover {
+                > a {
+                    &::before{
+                        border-top: solid 8px red;
+                    }
+                }
             }
         }
 

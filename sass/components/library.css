@@ -282,6 +282,7 @@
   position: relative;
   cursor: pointer;
   display: none;
+  z-index: 99;
 }
 
 .hamburger-btn .bar {
@@ -337,14 +338,14 @@
 .scroll-top {
   position: fixed;
   bottom: 40px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
   background-color: wheat;
   border: 1px wheat solid;
   border-radius: 4px;
   cursor: pointer;
-  z-index: 999;
+  z-index: 98;
   overflow: hidden;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
@@ -357,49 +358,18 @@
   visibility: visible;
 }
 
-.scroll-top::before, .scroll-top::after {
-  content: "";
-  font-family: "Fontawesome";
-  color: #fff;
+.scroll-top img {
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 20px;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-.scroll-top::before {
-  content: "\f106 ";
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-.scroll-top::after {
-  content: "\f102  ";
-  -webkit-transform: translate(-50%, 150%);
-          transform: translate(-50%, 150%);
-  opacity: 0;
-  visibility: hidden;
-  color: wheat;
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
 
 .scroll-top:hover {
-  background-color: #fff;
-}
-
-.scroll-top:hover::before {
-  -webkit-transform: translate(-50%, -150%);
-          transform: translate(-50%, -150%);
-  opacity: 0;
-  visibility: hidden;
-}
-
-.scroll-top:hover::after {
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  opacity: 1;
-  visibility: visible;
+  opacity: .8;
 }
 
 #page-loading {
@@ -695,75 +665,6 @@
   height: 100%;
   background-color: red;
   border-radius: 999px;
-}
-
-.tab .tab-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-
-.tab .tab-title {
-  padding: 10px 20px;
-  cursor: pointer;
-  position: relative;
-}
-
-.tab .tab-title.active {
-  color: red;
-}
-
-.tab .tab-content-box {
-  display: none;
-}
-
-.tab .tab-content-box.active {
-  display: block;
-  -webkit-animation: fadeInUp 1s;
-          animation: fadeInUp 1s;
-}
-
-.tab-lines .tab-link {
-  border-bottom: 1px blue solid;
-}
-
-.tab-lines .tab-line {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-  height: 1px;
-  background-color: wheat;
-  position: absolute;
-  bottom: -1px;
-}
-
-.tab-mobi .tab-link-mobi {
-  display: none;
-  width: 100%;
-  background-color: wheat;
-  color: #fff;
-  position: relative;
-  padding: 10px;
-  text-transform: uppercase;
-}
-
-.tab-mobi .tab-link-mobi::before {
-  content: '\f107 ';
-  font-family: 'Fontawesome';
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-size: 20px;
-}
-
-.tab-mobi .tab-title {
-  padding: 30px;
-}
-
-.tab-mobi .tab-title:first-child {
-  padding-left: 0;
 }
 
 .breadcrumb {

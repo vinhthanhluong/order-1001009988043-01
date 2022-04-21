@@ -15,8 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- CSS -->
-    <link href="./css/styles.css" rel="stylesheet" type="text/css" />
-    <link href="./css/responsive.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="./css/responsive.css" rel="stylesheet" type="text/css" /> -->
     
     <!-- CSS ben SASS -->
     <link rel="stylesheet" href="./sass/styles.css">
@@ -51,7 +51,7 @@
                                         Top
                                     </a>
                                 </li>
-                                <li class="dropdown current-menu-item">
+                                <li class="dropdown --active">
                                     <a href="#">
                                         About us
                                     </a>
@@ -165,12 +165,15 @@
                             <span></span>
                             <span></span>
                         </div>
+                        <div class="hamburger-btn">
+                            <div class="bar"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- end #header-->
-        <div id="main">
+        <div id="main" style="height: 2000px;">
             <section class="html-demo">
                 <div class="inner">
                     <nav class='pagination'>
@@ -185,33 +188,29 @@
                         </ul>
                     </nav>
 
-                    <div class="tab tab-lines tab-mobi">
-                        <div class="tab-tt">
-                            <div class="tab-link-mobi">
-                                <p class="tt-18 f-bold">Danh mục </p>
-                            </div>
+                    <div class="tabs">
+                        <div class="tab-head">
                             <div class="tab-link">
-                                <div class="tab-title active">
+                                <div class="tab-title active" data-tab="js1" data-tab-group="1">
                                     <p>test 1</p>
                                 </div>
-                                <div class="tab-title">
+                                <div class="tab-title"  data-tab="js2" data-tab-group="1">
                                     <p>test 2</p>
                                 </div>
-                                <div class="tab-title">
+                                <div class="tab-title"  data-tab="js3" data-tab-group="1">
                                     <p>test 3</p>
                                 </div>
-                                <div class="tab-line"></div>
                             </div>
                         </div>
     
-                        <div class="tab-content">
-                            <div class="tab-content-box active">
+                        <div class="tab-main">
+                            <div class="tab-content active" data-tab-content="js1" data-tab-group="1">
                                 <h1>content test 1</h1>
                             </div>
-                            <div class="tab-content-box">
+                            <div class="tab-content" data-tab-content="js2" data-tab-group="1">
                                 <h1>content test 2</h1>
                             </div>
-                            <div class="tab-content-box">
+                            <div class="tab-content" data-tab-content="js3" data-tab-group="1">
                                 <h1>content test 3</h1>
                             </div>
                         </div>
@@ -267,6 +266,10 @@
         <div id="footer">
             <address>Copyright &copy; 株式会社穂波エステート. All Rights Reserved.</address>
             <div class="to-top"></div>
+
+            <div class="scroll-top ">
+                <img src="./images/ic-scrolltop.png" width="26" alt="arrow-top">
+            </div>
         </div>
         <!-- end #footer -->
     </div>

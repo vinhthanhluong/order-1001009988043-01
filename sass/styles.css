@@ -101,6 +101,9 @@
   background: #fff;
   padding: 25px 0;
   border-bottom: 1px solid black;
+  width: 100%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 #header h1 {
@@ -143,7 +146,7 @@
 }
 
 .header-menu .overplay {
-  position: absolute;
+  position: fixed;
   top: 0%;
   left: 0;
   right: 0;
@@ -183,15 +186,11 @@
   font-size: 14px;
 }
 
-.menu-list .current-menu-item a {
+.menu-list .--active a {
   color: #1a2542;
 }
 
-.menu-list .current-menu-item a::before {
-  width: 100%;
-}
-
-.menu-list .current-menu-item .current-menu-item > a {
+.menu-list .--active .--active > a {
   background-color: #1a2542;
   color: white;
 }
