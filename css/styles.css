@@ -213,6 +213,42 @@
   text-align: center;
 }
 
+.text-aos {
+  margin-top: 1000px;
+  font-size: 30px;
+  color: blue;
+  position: relative;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #fff;
+  color: red;
+}
+.text-aos::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: blueviolet;
+  transition: all 1.2s ease;
+  right: 0;
+  left: unset;
+}
+.text-aos.aos-animate {
+  color: red;
+}
+.text-aos.aos-animate::before {
+  width: 0;
+}
+.text-aos2 {
+  margin-top: 1000px;
+}
+.text-aos3 {
+  margin-top: 1000px;
+}
+
 /*============================= HACK CSS =============================*/
 /* IE */
 /* EGDE */
