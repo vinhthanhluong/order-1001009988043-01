@@ -21,27 +21,32 @@
     margin: 0 0 20px;
   }
 
-  .tb-block-sp th,
-.tb-block-sp td {
-    widows: 100% !important;
+  .under-tbl tr th + td {
+    border-top: none;
   }
-
-  .tb-block-sp tr:not(:last-child) th + td {
+  .under-tbl tr:not(:first-child) th {
     border-top: none;
   }
 
-  .scroll-noti {
+  .tbl-block {
+    display: block;
+  }
+  .tbl-block thead, .tbl-block tr, .tbl-block td, .tbl-block th {
+    display: block;
+    width: 100%;
+  }
+
+  .tbl-note {
     font-size: 12px;
     opacity: 0.6;
   }
 
-  .tb-scroll-sp {
+  .tbl-scroll {
     overflow: auto;
-    padding-bottom: 20px;
   }
 
-  .tb-scroll-sp table {
-    min-width: 800px;
+  .tbl-scroll table {
+    min-width: 640px;
   }
 
   #content {
