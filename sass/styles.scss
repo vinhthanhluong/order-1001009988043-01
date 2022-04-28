@@ -10,7 +10,6 @@
 @import "./core/mixins";
 @import './core/code';
 @import url(../css/base.css);
-
 // @import url(../sass/core/base.css);
 
 
@@ -20,7 +19,7 @@
 
 /*=============================G L O B A L=============================*/
 #wrapper {
-    min-width: 1220px;
+    min-width: 1230px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
