@@ -26,14 +26,14 @@
     min-height: 100vh;
 }
 
-.inner-full {
+.container-full {
     max-width: $max-width;
     width: $inner-full-width;
     margin: 0 auto;
     padding: 0 $padding;
 }
 
-.inner {
+.container {
     width: $inner-width;
     max-width: 100%;
     margin: 0 auto;

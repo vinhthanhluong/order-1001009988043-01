@@ -16,14 +16,14 @@
   min-height: 100vh;
 }
 
-.inner-full {
+.container-full {
   max-width: 100%;
   width: 1920px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-.inner {
+.container {
   width: 1200px;
   max-width: 100%;
   margin: 0 auto;
