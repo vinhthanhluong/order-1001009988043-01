@@ -3,6 +3,7 @@
 @import url(../js/libs/slick/slick-theme.css);
 @import url(../css/base.css);
 @import url(../css/library.css);
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 .main-cl {
   color: wheat;
 }
@@ -72,10 +73,6 @@
   height: 0;
   clear: both;
   visibility: hidden;
-}
-
-.clearfix {
-  display: inline-block;
 }
 
 .modal-open {

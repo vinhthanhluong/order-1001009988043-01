@@ -214,10 +214,10 @@ address {
 
 * {
     box-sizing: border-box;
-    font-smoothing: antialiased;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+    // font-smoothing: antialiased;
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizespeed;
     // appearance: none;
     // -moz-appearance: none;
     // -webkit-appearance: none;

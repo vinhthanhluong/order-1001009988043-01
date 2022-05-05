@@ -12,10 +12,12 @@
 @import url(../css/base.css);
 // @import url(../sass/core/base.css);
 
-
 // Components
 @import url(../css/library.css);
 // @import url(../sass/components/library.css);
+
+//Font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 
 /*=============================G L O B A L=============================*/
 #wrapper {
@@ -87,9 +89,9 @@
     visibility: hidden;
 }
 
-.clearfix {
-    display: inline-block;
-}
+// .clearfix {
+//     display: inline-block;
+// }
 
 .modal-open {
     overflow: hidden;

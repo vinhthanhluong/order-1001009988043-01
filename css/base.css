@@ -271,10 +271,7 @@ address {
 /* ======================= BASE CSS =======================*/
 * {
   box-sizing: border-box;
-  font-smoothing: antialiased;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizespeed;
   margin: 0;
   padding: 0;
 }
