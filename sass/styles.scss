@@ -92,14 +92,15 @@
 // .clearfix {
 //     display: inline-block;
 // }
-
-.modal-open {
-    overflow: hidden;
-    position: relative;
-    -ms-touch-action: none;
-    touch-action: none;
-    -webkit-overflow-scrolling: auto;
+@include max-media(750px){
+    .no-scroll {
+        overflow: hidden;
+        -ms-touch-action: none;
+        touch-action: none;
+        -webkit-overflow-scrolling: auto;
+    }
 }
+
 
 /*============================= H_E_A_D_E_R =============================*/
 @import './components/header';

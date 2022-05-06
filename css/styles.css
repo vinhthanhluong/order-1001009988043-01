@@ -75,14 +75,14 @@
   visibility: hidden;
 }
 
-.modal-open {
-  overflow: hidden;
-  position: relative;
-  -ms-touch-action: none;
-  touch-action: none;
-  -webkit-overflow-scrolling: auto;
+@media screen and (max-width: 750px) {
+  .no-scroll {
+    overflow: hidden;
+    -ms-touch-action: none;
+    touch-action: none;
+    -webkit-overflow-scrolling: auto;
+  }
 }
-
 /*============================= H_E_A_D_E_R =============================*/
 #header {
   background: #fff;
