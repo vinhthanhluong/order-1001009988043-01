@@ -1,42 +1,109 @@
-.tabs{
-    .tab-content{
-        font-size: 40px;
-        text-align: center
+.index-page {
+    .index-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 108px;
+        margin-bottom: 55px;
     }
-}
 
-.text-aos{
-    margin-top: 1000px;
-    font-size: 30px;
-    color: blue;
-    position: relative;
-    transition: all .3s ease;
-    font-weight: bold;
-    letter-spacing: 5px;
-    color: $w-cl;
-    color: red;
-
-    &::before{
-        content: '';
-        @include pos-full;
-        background-color: blueviolet;
-        transition: all 1.2s ease;
-        right: 0;
-        left: unset;
-    }
-    
-    &.aos-animate{
-        color: red;
-        &::before{
-            width: 0;
+    .btn-link{
+        border: 4px solid #1F2674;
+        background-color: #fff;
+        width: 470px;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 140px;
+        position: relative;
+        a{
+            position: absolute;
+            top: 0%;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     }
 
-    &2{
-        margin-top: 1000px;
+    .ix-txt{
+        padding-left: 15px;
     }
 
-    &3{
-        margin-top: 1000px;
+    .ix-lb{
+        font-size: 20px;
+        opacity: .6;
     }
+
+    .ix-tt{
+        font-size: 30px;
+        
+    }
+
+    .index-bg{
+        position: relative;
+    }
+
+    .index-link{
+        position: absolute;
+        bottom: 11%;
+        left: 42%;
+        transform: translateY(-50%);
+        background-color: #FFFDE8;
+        width: 310px;
+        height: 50px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+
+    }
+}
+
+.btn-fix {
+    position: fixed;
+    top: 531px;
+    right: 0;
+}
+
+.social {
+    background-image: url("/images/bg-ins.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 310px;
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 44px;
+    margin-right: -5px;
+    position: relative;
+
+    a{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .social-ic{
+        margin-bottom: 24px;
+    }
+    .social-txt {
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+        display: flex;
+        flex-direction: row-reverse;
+        span {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    }
+
+
 }

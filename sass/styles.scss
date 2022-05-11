@@ -21,11 +21,12 @@
 
 /*=============================G L O B A L=============================*/
 #wrapper {
-    min-width: 1230px;
+    min-width: 1020px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    position: relative;
 }
 
 .container-full {

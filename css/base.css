@@ -294,21 +294,8 @@ html {
   margin: auto;
   font-family: "Noto Sans JP", sans-serif;
   line-height: 1.4;
-  color: #000;
+  color: #040000;
   background: #fff;
-}
-body::-webkit-scrollbar,
-html::-webkit-scrollbar {
-  width: 0px;
-}
-body::-webkit-scrollbar-thumb,
-html::-webkit-scrollbar-thumb {
-  background: transparent;
-  border-radius: 990px;
-}
-body::-webkit-scrollbar-track,
-html::-webkit-scrollbar-track {
-  background: transparent;
 }
 
 a {

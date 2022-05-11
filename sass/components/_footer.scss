@@ -19,14 +19,12 @@
     text-align: left;
     margin-top: auto;
 
-    address {
+    .copyright {
         padding: 14px 0;
         text-align: center;
-        color: #92d4e1;
-        background: #004870;
+        background-color: rgba($color: #040000, $alpha: 0.8);
+        color: #fff;
         font-size: 11px;
         letter-spacing: 0.005em;
     }
 }
-
-
