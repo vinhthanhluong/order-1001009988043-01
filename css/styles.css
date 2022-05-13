@@ -1,13 +1,6 @@
-@import url(../js/libs/aos/aos.css);
-@import url(../js/libs/slick/slick.css);
-@import url(../js/libs/slick/slick-theme.css);
 @import url(../css/base.css);
 @import url(../css/library.css);
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
-.main-cl {
-  color: wheat;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap");
 /*=============================G L O B A L=============================*/
 #wrapper {
   min-width: 1020px;
@@ -76,6 +69,14 @@
   visibility: hidden;
 }
 
+.f-yu {
+  font-family: "Yu Gothic";
+}
+
+.f-sef {
+  font-family: "Noto Serif JP", serif;
+}
+
 @media screen and (max-width: 750px) {
   .no-scroll {
     overflow: hidden;
@@ -87,7 +88,7 @@
 /*============================= H_E_A_D_E_R =============================*/
 #header {
   background: transparent;
-  padding: 25px 0;
+  padding: 20px 0;
   width: 100%;
   transition: all 0.3s ease;
   position: absolute;
@@ -96,7 +97,8 @@
   width: 100%;
 }
 #header h1 {
-  font-size: 20px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 /*============================= F_O_O_T_E_R =============================*/
@@ -121,12 +123,12 @@
   margin-top: auto;
 }
 #footer .copyright {
-  padding: 14px 0;
+  padding: 21px 0 17px;
   text-align: center;
   background-color: rgba(4, 0, 0, 0.8);
-  color: #fff;
-  font-size: 11px;
-  letter-spacing: 0.005em;
+  color: #fefefe;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 /*============================= C_O_N_T_E_N_T =============================*/
@@ -135,74 +137,87 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 108px;
-  margin-bottom: 55px;
-}
-.index-page .btn-link {
-  border: 4px solid #1F2674;
-  background-color: #fff;
-  width: 470px;
-  max-width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 140px;
-  position: relative;
-}
-.index-page .btn-link a {
-  position: absolute;
-  top: 0%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.index-page .ix-txt {
-  padding-left: 15px;
-}
-.index-page .ix-lb {
-  font-size: 20px;
-  opacity: 0.6;
-}
-.index-page .ix-tt {
-  font-size: 30px;
+  margin: 108px 0 55px;
 }
 .index-page .index-bg {
   position: relative;
+  background: url("../images/bg-main.jpg") center no-repeat;
+  width: 100%;
+  height: 1920px;
+}
+.index-page .index-box {
+  position: absolute;
+  bottom: 11.5%;
+  left: 40.4%;
+  left: 50.34%;
+  transform: translateX(-50%);
+  background-color: #C30E23;
+  width: 378px;
+  height: 261px;
+  border-radius: 10px;
+  padding: 28px 20px 20px 28px;
+}
+.index-page .ix-title {
+  margin-bottom: 10px;
+}
+.index-page .ix-title span {
+  display: block;
+  color: #FFFDE8;
+  font-weight: bold;
+}
+.index-page .ix-title .ix-sm {
+  font-size: 50px;
+  margin-bottom: 14px;
+}
+.index-page .ix-title .ix-bg {
+  font-size: 80px;
 }
 .index-page .index-link {
-  position: absolute;
-  bottom: 11%;
-  left: 42%;
-  transform: translateY(-50%);
-  background-color: #FFFDE8;
+  background-color: #fffde8;
   width: 310px;
   height: 50px;
+  max-width: 100%;
   border-radius: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: -1px;
 }
 
 .btn-fix {
   position: fixed;
-  top: 531px;
+  bottom: -32px;
   right: 0;
+  transition: all 0.3s ease;
 }
 
 .social {
-  background-image: url("/images/bg-ins.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  border: 5px solid #fff;
+  border-radius: 10px;
   height: 310px;
   width: 110px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   padding-top: 44px;
   margin-right: -5px;
   position: relative;
+  background-color: #fff;
+  z-index: 0;
+}
+.social::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, #fccc63 0%, #fbad50 13%, #e95950 31%, #cd486b 50%, #bc2a8d 66%, #8a3ab9 87%, #4c68d7 100%);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  z-index: -1;
 }
 .social a {
   position: absolute;
@@ -217,13 +232,10 @@
 .social .social-txt {
   color: #fff;
   font-weight: bold;
-  font-size: 20px;
-  display: flex;
-  flex-direction: row-reverse;
+  font-size: 30px;
 }
 .social .social-txt span {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
+  line-height: 1;
 }
 
 /*============================= HACK CSS =============================*/

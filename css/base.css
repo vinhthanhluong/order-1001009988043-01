@@ -3,75 +3,6 @@
    http://developer.yahoo.net/yui/license.txt
    version: 2.7.0
 */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 20%, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes fixedMenu {
-  0% {
-    opacity: 0.7;
-    transform: translateY(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes showTab {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes jelly {
-  0%, 100% {
-    transform: scale(1, 1);
-  }
-  25% {
-    transform: scale(0.9, 1.1);
-  }
-  50% {
-    transform: scale(1.1, 0.9);
-  }
-  75% {
-    transform: scale(0.95, 1.05);
-  }
-}
-@keyframes infin-box {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-    background-color: red;
-  }
-  29% {
-    opacity: 1;
-    background-color: red;
-  }
-  30% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 /* =================== RESET CSS =================== */
 *,
 *::before,
@@ -292,7 +223,7 @@ body,
 html {
   min-height: 100%;
   margin: auto;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Yu Gothic";
   line-height: 1.4;
   color: #040000;
   background: #fff;

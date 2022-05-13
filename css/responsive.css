@@ -6,8 +6,43 @@
   [href^=tel] {
     pointer-events: none;
   }
+
+  .social {
+    flex-direction: column;
+  }
+  .social .social-txt {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .social .social-txt span {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  .scroll-top {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .btn-fix.--show {
+    bottom: 27px;
+  }
+  .btn-fix.--show .scroll-top {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 /* end screen-min:751px */
+@media screen and (max-width: 1900px) {
+  .index-page .index-box {
+    left: 50.45%;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .index-page .index-box {
+    left: 50.6%;
+  }
+}
 /* end screen-min:751px && screen-max:1500px */
 @media screen and (max-width: 750px) {
   h1,
@@ -36,7 +71,7 @@ dd {
     min-width: unset !important;
   }
 
-  .inner {
+  .container {
     width: 100%;
     padding: 0 15px;
   }
@@ -45,27 +80,206 @@ dd {
     display: none !important;
   }
 
-  .open-nav .header-menu {
-    right: 0;
+  #header {
+    padding: 24px 0;
   }
-  .open-nav .overplay {
-    opacity: 1;
-    visibility: visible;
+  #header h1 {
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.75px;
   }
 
   .index-page .index-wrapper {
     justify-content: center;
-    margin-top: 90px;
-    margin-bottom: 88px;
+    margin: 88px 0;
+    margin-left: 2px;
+  }
+  .index-page .index-bg {
+    background: url("../images/bg-main-sp.jpg") center no-repeat;
+    background-size: contain;
+    height: 486.8vw;
+  }
+  .index-page .index-box {
+    width: 58vw;
+    height: 40.2vw;
+    left: 50.4%;
+    bottom: 29.4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+  }
+  .index-page .ix-title {
+    margin-bottom: 1.4493vw;
+  }
+  .index-page .ix-title .ix-sm {
+    font-size: 7.6vw;
+    margin-bottom: 2.6666vw;
+  }
+  .index-page .ix-title .ix-bg {
+    font-size: 12.3vw;
+  }
+  .index-page .index-link {
+    width: 48vw;
+    height: 7.2vh;
+    font-size: 3.6vw;
   }
   .index-page .btn-link:first-child {
     margin-bottom: 44px;
   }
+
+  .btn-fix {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+  }
+  .btn-fix.--show .scroll-top {
+    width: 120px;
+    margin: 0;
+  }
+
+  .social,
+.scroll-top {
+    border: 7px solid #fff;
+    border-radius: 0;
+    height: 120px;
+  }
+
+  .social {
+    width: 100%;
+    padding: 0 28px;
+    transition: all 0.3s ease;
+  }
+  .social::before {
+    content: "";
+    background: url("../images/bg-ins-sp.jpg") center no-repeat;
+    background-size: cover;
+    border-radius: 0;
+  }
+  .social .social-ic {
+    margin: 0 30px 0 0;
+  }
+  .social .social-txt {
+    font-size: 6.67vw;
+  }
+
+  .scroll-top {
+    flex-shrink: 0;
+    width: 0;
+    margin-right: -7px;
+    top: 0;
+  }
+
+  #footer {
+    margin-bottom: 120px;
+  }
+  #footer .copyright {
+    font-size: 30px;
+    padding: 27px 0 31px;
+  }
 }
 /* end screen-max:750px */
+@media screen and (max-width: 640px) {
+  #header h1 {
+    font-size: 18px;
+  }
+
+  .index-page .index-link {
+    height: 6vh;
+  }
+
+  .social,
+.scroll-top {
+    height: 80px;
+    border-width: 3px;
+  }
+
+  .social {
+    padding: 0 20px;
+  }
+  .social .social-ic {
+    margin-right: 15px;
+  }
+  .social .social-ic img {
+    width: 50px;
+  }
+
+  .btn-fix.--show .scroll-top {
+    width: 80px;
+  }
+
+  .scroll-top {
+    margin-right: -3px;
+  }
+  .scroll-top img {
+    width: 37px;
+  }
+
+  #footer {
+    margin-bottom: 80px;
+  }
+  #footer .copyright {
+    font-size: 16px;
+    padding: 19px 0;
+  }
+}
 /* end screen-max:640px */
+@media screen and (max-width: 560px) {
+  .index-page .index-link {
+    height: 5vh;
+  }
+}
 /* end screen-max:560px */
+@media screen and (max-width: 520px) {
+  .index-page .btn-link:first-child {
+    margin-bottom: 30px;
+  }
+}
 /* end screen-max:520px */
+@media screen and (max-width: 475px) {
+  .index-page .index-wrapper {
+    margin: 50px 0;
+  }
+  .index-page .index-link {
+    height: 4.5vh;
+  }
+  .index-page .index-box {
+    border-radius: 5px;
+  }
+
+  .social,
+.scroll-top {
+    height: 60px;
+    border-width: 2px;
+  }
+
+  .social {
+    padding: 0 15px;
+  }
+  .social .social-ic {
+    margin-right: 10px;
+  }
+  .social .social-ic img {
+    width: 38px;
+  }
+
+  .btn-fix.--show .scroll-top {
+    width: 60px;
+  }
+
+  .scroll-top {
+    margin-right: -2px;
+  }
+  .scroll-top img {
+    width: 30px;
+  }
+
+  #footer {
+    margin-bottom: 60px;
+  }
+}
 /* end screen-max:475px */
 @media screen and (max-width: 425px) {
   h1,
@@ -89,8 +303,22 @@ dt,
 dd {
     font-size: 140%;
   }
+
+  #header h1 {
+    font-size: 14px;
+  }
+
+  .index-page .index-link {
+    height: 4vh;
+  }
 }
 /* end screen-max:425px */
+@media screen and (max-width: 375px) {
+  .index-page .index-link {
+    height: 3.5vh;
+    font-size: 12px;
+  }
+}
 /* end screen-max:375px */
 /* end screen-max:320px */
 /*============================= HACK CSS =============================*/
