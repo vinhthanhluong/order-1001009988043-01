@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Copyright (c) 2009, Yahoo! Inc. All rights reserved.
    Code licensed under the BSD License:
    http://developer.yahoo.net/yui/license.txt
@@ -223,7 +224,7 @@ body,
 html {
   min-height: 100%;
   margin: auto;
-  font-family: "Yu Gothic";
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
   line-height: 1.4;
   color: #040000;
   background: #fff;

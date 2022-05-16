@@ -117,7 +117,6 @@
         .index-wrapper {
             justify-content: center;
             margin: 88px 0;
-            margin-left: 2px;
         }
 
         .index-bg {
@@ -160,6 +159,10 @@
             &:first-child {
                 margin-bottom: 44px;
             }
+
+            img{
+                height: auto;
+            }
         }
     }
 
@@ -168,12 +171,13 @@
         left: 0;
         width: 100%;
         display: flex;
+        justify-content: space-between;
+        transition: all .4s ease;
+        transform: translateY(100%);
+        background-color: #fff;
 
         &.--show {
-            .scroll-top {
-                width: 120px;
-                margin: 0;
-            }
+           transform: translateY(0);
         }
     }
 
@@ -185,15 +189,14 @@
     }
 
     .social {
-        width: 100%;
-        padding: 0 28px;
+        width: calc(100% - 123px);
+        padding: 0 15px 0 28px;
         transition: all 0.3s ease;
 
         &::before {
             content: "";
             background: url("../images/bg-ins-sp.jpg") center no-repeat;
             background-size: cover;
-
             border-radius: 0;
         }
 
@@ -203,13 +206,16 @@
 
         .social-txt{
             font-size: 6.67vw;
+            span{
+                letter-spacing: 1.5px;
+            }
         }
     }
 
     .scroll-top {
         flex-shrink: 0;
-        width: 0;
-        margin-right: -7px;
+        width: 120px;
+        margin: 0;
         top: 0;
     }
 
@@ -244,24 +250,22 @@
 
     .social {
         padding: 0 20px;
+        width: calc(100% - 83px);
         .social-ic {
-            margin-right: 15px;
+            margin-right: 0;
             img {
                 width: 50px;
             }
         }
-    }
 
-    .btn-fix {
-        &.--show {
-            .scroll-top {
-                width: 80px;
-            }
+        .social-txt{
+            text-align: center;
+            width: 100%;
         }
     }
 
     .scroll-top {
-        margin-right: -3px;
+        width: 80px;
         img {
             width: 37px;
         }
@@ -326,24 +330,22 @@
 
     .social {
         padding: 0 15px;
+        width: calc(100% - 62px);
         .social-ic {
-            margin-right: 10px;
             img {
                 width: 38px;
             }
         }
-    }
 
-    .btn-fix {
-        &.--show {
-            .scroll-top {
-                width: 60px;
+        .social-txt{
+            span{
+                letter-spacing: 0;
             }
         }
     }
 
     .scroll-top {
-        margin-right: -2px;
+        width: 60px;
         img {
             width: 30px;
         }
@@ -400,6 +402,9 @@
             height: 3.5vh;
             font-size: 12px;
         }
+    }
+    .social{
+        padding: 0 10px;
     }
 }
 

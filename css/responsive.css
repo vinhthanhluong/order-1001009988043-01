@@ -92,7 +92,6 @@ dd {
   .index-page .index-wrapper {
     justify-content: center;
     margin: 88px 0;
-    margin-left: 2px;
   }
   .index-page .index-bg {
     background: url("../images/bg-main-sp.jpg") center no-repeat;
@@ -128,16 +127,22 @@ dd {
   .index-page .btn-link:first-child {
     margin-bottom: 44px;
   }
+  .index-page .btn-link img {
+    height: auto;
+  }
 
   .btn-fix {
     bottom: 0;
     left: 0;
     width: 100%;
     display: flex;
+    justify-content: space-between;
+    transition: all 0.4s ease;
+    transform: translateY(100%);
+    background-color: #fff;
   }
-  .btn-fix.--show .scroll-top {
-    width: 120px;
-    margin: 0;
+  .btn-fix.--show {
+    transform: translateY(0);
   }
 
   .social,
@@ -148,8 +153,8 @@ dd {
   }
 
   .social {
-    width: 100%;
-    padding: 0 28px;
+    width: calc(100% - 123px);
+    padding: 0 15px 0 28px;
     transition: all 0.3s ease;
   }
   .social::before {
@@ -164,11 +169,14 @@ dd {
   .social .social-txt {
     font-size: 6.67vw;
   }
+  .social .social-txt span {
+    letter-spacing: 1.5px;
+  }
 
   .scroll-top {
     flex-shrink: 0;
-    width: 0;
-    margin-right: -7px;
+    width: 120px;
+    margin: 0;
     top: 0;
   }
 
@@ -198,20 +206,21 @@ dd {
 
   .social {
     padding: 0 20px;
+    width: calc(100% - 83px);
   }
   .social .social-ic {
-    margin-right: 15px;
+    margin-right: 0;
   }
   .social .social-ic img {
     width: 50px;
   }
-
-  .btn-fix.--show .scroll-top {
-    width: 80px;
+  .social .social-txt {
+    text-align: center;
+    width: 100%;
   }
 
   .scroll-top {
-    margin-right: -3px;
+    width: 80px;
   }
   .scroll-top img {
     width: 37px;
@@ -257,20 +266,17 @@ dd {
 
   .social {
     padding: 0 15px;
-  }
-  .social .social-ic {
-    margin-right: 10px;
+    width: calc(100% - 62px);
   }
   .social .social-ic img {
     width: 38px;
   }
-
-  .btn-fix.--show .scroll-top {
-    width: 60px;
+  .social .social-txt span {
+    letter-spacing: 0;
   }
 
   .scroll-top {
-    margin-right: -2px;
+    width: 60px;
   }
   .scroll-top img {
     width: 30px;
@@ -317,6 +323,10 @@ dd {
   .index-page .index-link {
     height: 3.5vh;
     font-size: 12px;
+  }
+
+  .social {
+    padding: 0 10px;
   }
 }
 /* end screen-max:375px */
